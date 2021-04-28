@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Word count</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+<div class="container mt-3">
+    <div>
+        <h2 class="alert alert-primary col-sm-8"> Welcome to word counter page</h2>
+        <form action= "{% url 'count' %}" method = 'GET'>
+            {% csrf_token %}
+            <textarea name="textarea" cols=40 rows=10  class="form-control col-sm-8" ></textarea><br>
+            <input type="submit" value="count"class="btn btn-primary "   >
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
